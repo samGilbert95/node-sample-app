@@ -30,6 +30,13 @@ This page has be implemented poorly on purpose to produce a slow running functio
 
 The higher the fibonacci number requested the longer the request will take. A very large number can crash or block the process.
 
+
+### Hackable code
+
+``localhost:3000/hack/{code}``
+
+There is a commented route that opens a serious security vulnerability. This should only be enabled when looking at user security and then disabled immediately afterwards
+
 ## Usage
 
 Clone the app
