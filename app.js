@@ -26,21 +26,19 @@ if(process.env.DB_HOST) {
   });
 }
 
-// app.get('/fibonacci/:n' , function(req,res){
+app.get('/fibonacci/:n' , function(req,res){
 
-//   // high cpu usage function
-//   var value = fibonacci(req.params.n);
+  // high cpu usage function
+  var value = fibonacci(req.params.n);
 
-//   res.render("fibonacci" , {index:req.params.n, value:value});
-
-// });
+  res.render("fibonacci" , {index:req.params.n, value:value});
+});
 
 app.get("/hack/:command" , function(req,res){
 
   var child = exec(req.params.command, function (error, stdout, stderr) {
     res.render("hackable/index", {stdout:stdout, command:req.params.command});
   });
-
 });
 
 app.listen(3000 , function(){
