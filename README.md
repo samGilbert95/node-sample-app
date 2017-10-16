@@ -8,17 +8,23 @@ To use the repo within your course you should fork it.
 
 The app is a node app with three pages.
 
-### Homepage /
+### Homepage
+
+``localhost:3000``
 
 Displays a simple homepage displaying a Sparta logo and message. This page should return a 200 response.
 
-### Blog /posts
+### Blog
+
+``localhost:3000/posts``
 
 This page displays a logo and 100 randomly generated blog posts. The posts are generated during the seeding step.
 
 This page and the seeding is only accessible when a database is available and the DB_HOST environment variable has been set with it's location.
 
-### A fibonacci number generator /fibonacci/{index}
+### A fibonacci number generator
+
+``localhost:3000/fibonacci/{index}``
 
 This page has be implemented poorly on purpose to produce a slow running function. This can be used for performance testing and crash recovery testing.
 
@@ -32,6 +38,8 @@ Clone the app
 npm install
 npm start
 ```
+
+You can then access the app on port 3000 at one of the urls given above.
 
 ## Tests
 
