@@ -21,7 +21,7 @@ if(process.env.DB_HOST) {
   app.get("/posts" , function(req,res){
       Post.find({} , function(err, posts){
         if(err) return res.send(err);
-        res.json(posts);
+        res.render("posts/index" , {posts:posts});
       })
   });
 }
